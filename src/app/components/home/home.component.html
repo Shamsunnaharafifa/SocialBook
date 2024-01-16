@@ -1,0 +1,581 @@
+<div class="home-container" [ngClass]="{'dark-theme-mode':isDarkTheme}">
+
+    <div class="home_header" clickOutside (clickOutside) = "clickedOutside()">
+
+        <div class="home_header_left">
+            <img src="assets/img/logo.png" alt="logo" class="logo">
+            <div class="input">
+                <mat-icon class="search-icon">search_outline</mat-icon>
+                <form>
+                    <input type="text" placeholder="Search SocialBook">
+                </form>
+            </div>
+        </div>
+
+        <div class="home_header_middle">
+          
+           <div class="middle">
+            <div class="active">
+                <mat-icon>home</mat-icon>
+            </div>
+            <div>
+                <mat-icon>ondemand_video</mat-icon>
+            </div>
+            <div>
+                <mat-icon>store</mat-icon>
+            </div>
+            <div>
+                <mat-icon>group</mat-icon>
+            </div>
+            <div>
+                <mat-icon>flag</mat-icon>
+            </div>
+        </div>
+        
+        </div>
+
+          <!-- seeting menu -->
+        <div class="settings-menu" *ngIf="isMenuOpened"  >
+            <div class="settings-menu-inner">
+                <div id="dark-btn" class="dark-btn-on">
+                    <mat-slide-toggle [(ngModel)]="isDarkTheme"></mat-slide-toggle>
+                </div>
+                <mat-card>
+                   
+                <div class="profileimg" fxLayout="row">
+                    <img src="assets/img/profile-pic.png" >
+                        <div class="name" fxLayout="column">
+                            <span>Shamsunnahar Afifa</span>
+                                <a href="#">profile</a>
+                        </div>
+                </div>
+                </mat-card>
+                <div class="inner" >
+                    
+
+                    <div class="settings">
+                     <div class="settings-icon" fxLayout="row">
+                            <img src="assets/img/setting.png" >
+                             <a href="#">Settings & Privacy</a>
+                             <mat-icon>keyboard_arrow_right</mat-icon>
+                        </div>
+                    </div>
+                    <div class="settings">
+                        <div class="settings-icon" fxLayout="row">
+                            <img src="assets/img/help.png" >
+                             <a href="#">Help & support</a>
+                             <mat-icon>keyboard_arrow_right</mat-icon>
+                        </div>
+                    </div>
+                    <div class="settings">
+                        <div class="settings-icon" fxLayout="row">
+                            <img src="assets/img/display.png" >
+                             <a href="#">Display & accessibility</a>
+                             <mat-icon>keyboard_arrow_right</mat-icon>
+                        </div>
+                    </div>
+
+                    <div class="settings">
+                        <div class="feedbackimg" fxLayout="row">
+                            <img src="assets/img/feedback.png" >
+                            <a href="#">Feed back</a>
+                            <mat-icon>keyboard_arrow_right</mat-icon>
+                        </div>
+                    </div>
+
+                    <div class="settings">
+                        <div class="settings-icon" fxLayout="row">
+                            <img src="assets/img/logout.png" >
+                             <a href="#">Logout</a>
+                             <mat-icon>keyboard_arrow_right</mat-icon>
+                        </div>
+                    </div>
+            
+                </div>
+               <div class="privacy">
+                <a href="#">Privacy</a>
+                <p>.</p>
+                <a href="#">Advertising</a>
+                <p>.</p>
+                <a href="#">Ad choices</a>
+                <mat-icon>navigate_next</mat-icon>
+                <p>.</p>
+                <a href="#">Cookies</a>
+                <p>.</p>
+               </div>
+               <div class="more">
+                <a href="#">More</a>
+                <p>.</p>
+                <a href="#">Meta</a>
+                <p>@ 2022</p>
+               </div>
+            </div>
+            
+
+        </div> 
+
+        <div class="home_header_right">
+            <div class="profile online"   (click)="toggleMenu()">
+                <img src="assets/img/profile-pic.png">
+            </div>
+
+            
+            <div>
+                <mat-icon>menu</mat-icon>
+            </div>
+
+            <div>
+                <mat-icon
+                matBadge="4"
+                matBadgeColor="primary"
+                matBadgeOverlap="flase"
+                matBadgePosition="above after"
+                >forum</mat-icon>
+            </div>
+
+            <div>
+                <mat-icon
+                matBadge="3"
+                matBadgeColor="warn"
+                matBadgeOverlap="flase"
+                matBadgePosition="above after"
+                >notifications</mat-icon>
+            </div>
+        </div>
+
+        <mat-icon [matMenuTriggerFor]="menu">expand_more</mat-icon>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+                <mat-icon>exit_to_app</mat-icon> Logout
+            </button>
+        </mat-menu>
+    </div>
+    <!-- header ends here -->
+
+    <div class="home_body">
+
+        <div class="home_body_sidebarleft">
+            <div class="inside" fxLayout="column" >
+            
+                <div class="profile">
+                    <a href="#">
+                        <img src="assets/img/profile-pic.png" >
+                        <span class="name">Shamsunnahar Afifa</span>
+                    </a>
+                </div>
+                
+
+                <!-- <mat-icon>local_hospital</mat-icon>
+                <span class="covid">COVID-19 information center</span> -->
+            
+
+                <div>
+                <a href="#">
+                    <mat-icon>people</mat-icon>
+                    <span>Friends</span></a>
+                
+                </div>
+
+                <div>
+                <a href="#">
+                    <mat-icon>bookmark</mat-icon>
+                    <span>Saved</span> 
+                </a>
+                
+                </div>
+
+                <div>
+                <a href="#">
+                    <mat-icon>groups</mat-icon>
+                    <span>Group</span>
+                </a>
+                
+                </div>
+
+                <div>
+                <a href="#">
+                    <mat-icon>store</mat-icon>
+                    <span>Marketplace</span>
+                </a>
+                
+                </div>
+
+                <div>
+                <a href="#">
+                    <mat-icon>flag</mat-icon>
+                    <span>pages</span>
+                </a>
+                
+                </div>
+            
+
+            <!-- <div>
+                <mat-icon>chat</mat-icon>
+                <span>messenger</span>
+            </div> -->
+
+            
+
+                <div>
+                <a href="#">
+                    <mat-icon>video_library</mat-icon>
+                    <span>Watch</span>
+                </a>
+                
+                </div>
+
+                <div class="seemore">
+                <a href="#">
+                    <mat-icon class="see-more">expand_more</mat-icon>
+                    <span>See More</span>
+                </a>
+                
+                </div>
+            
+
+        </div>
+
+        <div class="home_body_sidebarleft_shorts" >
+            <div class="shortcut" >
+                <div class="shorts">
+                    <span>Your Shortcuts</span>
+                </div>
+                
+                <section>
+                    <div class="edit">
+                    <a href="#"> <button mat-raised-button disabled>Edit</button></a>
+                    </div>
+                </section>
+            
+            </div>
+            <div class="shortcut-links">
+
+                <div class="games">
+                    <a href="#">
+                        <mat-icon>games</mat-icon>
+                        <span>Games</span>
+                    </a>
+                </div>
+
+                <div class="web-develop">
+                    <a href="#">
+                        <mat-icon>computer</mat-icon>
+                        <span>Web Developers</span>
+                    </a>
+                </div>
+
+                <div class="design">
+                    <a href="#">
+                        <mat-icon>desktop_mac</mat-icon>
+                        <span>Web Design Course</span>
+                    </a>
+                </div>
+
+                <div class="stack">
+                    <a href="#">
+                        <mat-icon>desktop_windows</mat-icon>
+                        <span>Full stack development</span>
+                    </a>
+                </div>
+                
+                
+
+            </div>
+
+            <div class="seemore">
+                <a href="#">
+                    <mat-icon class="see-more">expand_more</mat-icon>
+                    <span>See More</span>
+                </a>
+                
+            </div>
+
+        </div>
+    
+
+      
+        </div> 
+
+       
+        <div class="home_body_contentMiddle">
+
+            <div class="home_body_contentMiddle_top">
+                <!-- image cards -->
+                <!-- <mat-card *ngFor="let i of images" class="image-card">
+                    <img src="{{ i }}" alt="bg" class="bg">
+                    <mat-card-content>
+                        <img 
+                        src="assets/img/upload.png"
+                         alt="avatar"
+                         class="avatar"
+                         >
+                         <span class="card-name">NAME</span>
+                    </mat-card-content>
+                </mat-card> -->
+
+                <div class="story-gallery">
+                    
+                    <div class="story story1" fxLayout="column" >
+                        <img src="assets/img/upload.png">
+                        <span>Post Story</span>
+                    </div>
+
+                    <div class="story story2" fxLayout="column" >
+                        <img src="assets/img/member-1.png">
+                        <span>Alison</span>
+                    </div>
+
+                    <div class="story story3" fxLayout="column" >
+                        <img src="assets/img/member-2.png">
+                        <span>Jackson</span>
+                    </div>
+
+                    <div class="story story4" fxLayout="column" >
+                        <img src="assets/img/member-3.png">
+                        <span>Samona</span>
+                    </div>
+
+                    <div class="story story5" fxLayout="column" >
+                        <img src="assets/img/member-4.png">
+                        <span>John Dae</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="home_body_contentMiddle_center">
+                <mat-card class="post-message">
+                    <mat-card-header class="post-message-header">
+                        <img src="assets/img/profile-pic.png"alt="">
+                        <form #form="ngForm" (ngSubmit)="postMessage(form)">
+                            <input type="text"
+                            class="on-your-mind"
+                            name="message"
+                            ngModel placeholder="What's on your mind?">
+                           
+                            <!-- <button type="submit"></button> -->
+                        </form>
+
+                    </mat-card-header>
+
+                    <mat-card-content class="card-body">
+                        <div>
+                            <mat-icon color="accent">videocam</mat-icon>
+                            <span>Live Video</span>
+                        </div>
+
+                        <div>
+                            <mat-icon color="primary">photo-album</mat-icon>
+                            <span>Photo/Video</span>
+                        </div>
+
+                        <div>
+                            <mat-icon color="warn">mood</mat-icon>
+                            <span>Feeling/Activity</span>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+
+                <!-- loop through all posts from database and display -->
+                <mat-card *ngFor="let p of posts" class="posts">
+                    <mat-card-header class="posts_header">
+                        <img alt="{{p?.title}}" src="p?.avatar" >
+                        <div class="post_header_right">
+                            <span>{{ p?.time?.seconds * 1800 | date:'shortTime' }}</span>
+                            <h3>{{ p?.title }}</h3>
+                        </div>
+                    </mat-card-header>
+
+                    <mat-card-content class="posts_body">
+                        <p>{{ p?.message }}</p>
+                    </mat-card-content>
+                </mat-card>
+
+                <mat-card class="post-container">
+                    <div class="post-row">
+                        <div  fxLayout="row">
+                            <img src="assets/img/profile-pic.png" class="profileimg">
+                                <div class="name" fxLayout="column">
+                                    <span>Shamsunnahar Afifa</span>
+                                    <span class="time">June 24 2022, 13:40pm</span>
+                                </div>
+                                
+                        </div>
+                        <a href="#"><i class="fa-solid fa-ellipsis-v"></i></a>
+                    </div>
+                    <mat-card-content class="user-profile">
+                    
+                    <div class="post-text">
+                        <p>For the very first time in Bangladesh, MCCH introduces built in truss (decor and lighting support system) 
+                            at the event venue. Now event execution is even more hassle free! <a href="#">See More</a></p>
+                        <img src="assets/img/feed-image-1.png" class="post-img">
+
+                        <div class="post-row">
+                            <div class="activity-icons">
+                                <div><img src="assets/img/like-blue.png"> 120</div>
+                                <div><img src="assets/img/comments.png"> 45</div>
+                                <div><img src="assets/img/share.png"> 20</div>
+                            </div>
+                            <div class="post-profile-icon">
+                                <img src="assets/img/profile-pic.png"> <i class="fa-solid fa-angle-down"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    </mat-card-content>
+                </mat-card>
+                
+                <mat-card class="post-container">
+                    <div class="post-row">
+                        <div  fxLayout="row">
+                            <img src="assets/img/profile-pic.png" class="profileimg">
+                                <div class="name" fxLayout="column">
+                                    <span>Shamsunnahar Afifa</span>
+                                    <span class="time">January 20 2022, 11:40pm</span>
+                                </div>
+                                
+                        </div>
+                        <a href="#"><i class="fa-solid fa-ellipsis-v"></i></a>
+                    </div>
+                    <mat-card-content class="user-profile">
+                    
+                    <div class="post-text">
+                        <p>Magical winter experiences await in your favourite European city with our Economy and Business offers! 
+                            Book by 9 November ❄️ <a href="#">See More</a></p>
+                        <img src="assets/img/feed-image-2.png" class="post-img">
+
+                        <div class="post-row">
+                            <div class="activity-icons">
+                                <div><img src="assets/img/like-blue.png"> 120</div>
+                                <div><img src="assets/img/comments.png"> 45</div>
+                                <div><img src="assets/img/share.png"> 20</div>
+                            </div>
+                            <div class="post-profile-icon">
+                                <img src="assets/img/profile-pic.png"> <i class="fa-solid fa-angle-down"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    </mat-card-content>
+                </mat-card>
+
+                <mat-card class="post-container">
+                    <div class="post-row">
+                        <div  fxLayout="row">
+                            <img src="assets/img/profile-pic.png" class="profileimg">
+                                <div class="name" fxLayout="column">
+                                    <span>Shamsunnahar Afifa</span>
+                                    <span class="time">April 12 2022, 10:40pm</span>
+                                </div>
+                                
+                        </div>
+                        <a href="#"><i class="fa-solid fa-ellipsis-v"></i></a>
+                    </div>
+                    <mat-card-content class="user-profile">
+                    
+                    <div class="post-text">
+                        <p>🏵️🌸🪷 Artificial Flower bucket with flower🌸🌸
+                            It makes your home more refresh and give a soothing tone. <a href="#">See More</a></p>
+                        <img src="assets/img/feed-image-3.png" class="post-img">
+
+                        <div class="post-row">
+                            <div class="activity-icons">
+                                <div><img src="assets/img/like-blue.png"> 120</div>
+                                <div><img src="assets/img/comments.png"> 45</div>
+                                <div><img src="assets/img/share.png"> 20</div>
+                            </div>
+                            <div class="post-profile-icon">
+                                <img src="assets/img/profile-pic.png"> <i class="fa-solid fa-angle-down"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    </mat-card-content>
+                </mat-card>
+
+                <button mat-raised-button type="button" class="load-more-button">Load More</button>
+
+            </div>            
+        </div>
+
+        <div class="home_body_feedRight">
+           
+            <!-- <img src="assets/img/shortcut-1.png" alt="feed"> -->
+           
+            <div class="feedRight-title">
+                <span>Events</span>
+                <a href="#">See All</a>
+            </div>
+
+            <div class="feedRight-event">
+                <div class="left-event" fxLayout="column">
+                   <span>18</span>
+                    <span class="month">March</span>
+                </div>
+                <div class="right-event" fxLayout="column">
+                    <span class="social">Social Media</span>
+                    <div>
+                        <!-- <mat-icon>location_on</mat-icon> -->
+                        <span><i class="fa-solid fa-location-dot"></i> Wilson Tech Park</span>
+                    </div>
+                    <a href="#">More Info</a>
+                </div>
+            </div>
+            <div class="feedRight-event">
+                <div class="left-event" fxLayout="column">
+                   <span>22</span>
+                    <span class="month">June</span>
+                </div>
+                <div class="right-event" fxLayout="column">
+                    <span class="social">Mobile Marketing</span>
+                    <div>
+                    <!-- <mat-icon>location_on</mat-icon> -->
+                    <span><i class="fa-solid fa-location-dot"></i> Wilson Tech Park</span>
+                </div>
+                    <a href="#">More Info</a>
+                </div>
+            </div>
+
+            <div class="feedRight-title">
+                <span>Advertisement</span>
+                <a href="#">Close</a>
+            </div>
+            <img src="assets/img/advertisement.png" class="sidebar-ads">
+
+            <div class="feedRight-title">
+                <span>Conversation</span>
+                <a href="#">Hide Chat</a>
+            </div>
+
+            <div class="online-list">
+                <div class="online">
+                    <img src="assets/img/member-1.png">
+                </div>
+                <span>Alison Mina</span>
+            </div>
+
+            <div class="online-list">
+                <div class="online">
+                    <img src="assets/img/member-2.png">
+                </div>
+                <span>Jakson Aston</span>
+            </div>
+
+            <div class="online-list">
+                <div class="online">
+                    <img src="assets/img/member-3.png">
+                </div>
+                <span>Samon Rose</span>
+            </div>
+
+        </div>
+
+        
+
+
+    </div>
+</div>
+
+<div class="footer">
+    <p>Copyright 2022 - Social Book</p>
+</div>

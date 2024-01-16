@@ -1,0 +1,91 @@
+
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+* {
+    margin:0;
+    font-family: 'Lucida Grande', tahoma,verdana,arial,sans-serif;
+    line-height: 1.28; 
+}
+
+@media only screen and (max-width: 600px) {
+    body{
+        width: 100%;
+    }
+  }
+
+.app-header{
+    width: 100%;
+    height: 90px;
+    background-color: #3b5998;
+    
+    
+}
+
+.name {
+  padding-left: 80px;
+}
+
+.nav-tool-items {
+  margin-right: 120px;
+}
+
+a{
+    font-family: tahoma,verdana,arial,sans-serif;
+    font-size: 38px;
+    letter-spacing:0.05px;
+    margin: 0;
+    color:#fff;
+    
+}
+
+.SocialBook {
+    display: flex;
+    /* padding: 20px 0;
+    margin-left: 20px; */
+    
+}
+
+.btn-block {
+    position:relative;
+    margin-top: 10px;
+    background-color: #5b72a9;
+    border: 1px solid #999;
+    border-color:#1a356e #2f477a #29447e #1a356e;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+    cursor:pointer;
+    font-size:15px;
+    font-weight:bold;
+    text-align:center;
+    color:#fff;
+}
+
+.row1 {
+  
+    color:#fff;
+    font-size:12px;
+    width:180px;
+    cursor:pointer;
+    
+  }
+
+  .row2 {
+    color:#9daccb;
+    font-size:12px;
+    width:200px;
+    cursor:pointer;
+  }
+
+  .example-full-width{
+    margin: 0;
+    width: 190px;
+    
+  }
+  .example-full-width1{
+    margin: 0;
+    width: 190px;
+    padding-top: 10px;
+  }
+
+

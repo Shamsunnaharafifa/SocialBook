@@ -1,0 +1,134 @@
+<div id="contentwrapper">
+    <div id="content" fxLayout="row" >
+
+        <div id="leftbod" fxLayout="column" fxLayoutAlign="start">
+
+            <div class="connect bolder">
+                <a>Connect with friends and the</a><br>
+                   <a> world around you on Facebook.</a>
+                
+            </div>
+
+            <div class="leftbar">
+                <div class="fb1">
+                    <span class="rowtext">See photos and updates</span>
+                    <span class="rowtext2 fb1">from friends in News Feed</span>
+                  </div>
+            </div>
+
+            <div class="leftbar">
+                <div class="fb1">
+                    <span class="rowtext">Share what's new</span>
+                    <span class="rowtext2 fb1">in your life on your timeline</span>
+                  </div>
+            </div>
+            <div class="leftbar">
+                <div class="fb1">
+                    <span class="rowtext">Find more</span>
+                    <span class="rowtext2 fb1">of what you're looking for with graph search</span>
+                  </div>
+            </div>
+           
+
+        </div>
+
+       
+        <div id="rightbod" fxLayout="column">
+            <div class="signup bolder">
+                <a target="_blank" class="signup">Sign Up</a>
+                
+            </div>
+            <div class="free bolder">
+                <a>It's free and always will be</a>
+            </div>
+            
+            <form  class="formbox" #form="ngForm">
+                <table class="inputbody in1" cellspacing="0"><tr>
+                    <td><mat-form-field class="inputbody in1" appearance="fill">
+                      <mat-label>First name</mat-label>
+                      <input matInput type="text">
+                    </mat-form-field></td>
+
+                    <td><mat-form-field class="inputbody in1" appearance="fill">
+                        <mat-label>Last name</mat-label>
+                        <input matInput type="text">
+                      </mat-form-field></td>
+                    </tr>
+                    </table>
+            </form>
+
+            <form class="formbox" #form="ngForm">
+                <table class="inputbody in2" cellspacing="0"><tr>
+                    <td><mat-form-field class="inputbody in2" appearance="fill">
+                      <mat-label>Email or Mobile number</mat-label>
+                      <input matInput type="email">
+                    </mat-form-field></td>
+                    </tr>
+                </table>
+            </form>
+            <form class="formbox" #form="ngForm">
+                <table class="inputbody in2" cellspacing="0"><tr>
+                    <td><mat-form-field class="inputbody in2" appearance="fill">
+                        <mat-label>Re-enter email or mobile number</mat-label>
+                        <input matInput type="email">
+                      </mat-form-field></td>
+                    </tr>
+                    </table>
+            </form>
+            <form class="formbox" #form="ngForm">
+                <table class="inputbody in2" cellspacing="0"><tr>
+                    <td><mat-form-field class="inputbody in2" appearance="fill">
+                      <mat-label>New password</mat-label>
+                      <input matInput type="password">
+                    </mat-form-field></td>
+                </tr>
+                </table>
+                </form>
+
+                <form #form="ngForm">
+                <mat-form-field appearance="fill" class="birthday">
+                    <mat-label>Birthday</mat-label>
+                    <input matInput [matDatepicker]="picker">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
+                </form>
+              
+                  <div>
+                    <section class="gendercheck">
+                        <label class="gender-margin">Gender:</label>
+                        <mat-radio-group [(ngModel)]="labelPosition">
+                          <mat-radio-button class="gender-margin" value="female">Female</mat-radio-button>
+                          <mat-radio-button class="gender-margin" value="male">Male</mat-radio-button>
+                        </mat-radio-group>
+                      </section>
+                  </div>
+
+                  <div class="agreebox">
+                    <span class="agree">By clicking Sign Up, you agree to our 
+                    <a class="link">Terms</a> and that you have read our 
+                    <a class="link">Data use Policy</a>, including our 
+                    <a class="link">Cookie Use</a>.</span>
+                  </div>
+                  
+                  <form #form="ngForm">
+                  <div class="formbox">
+                    <section>
+                      <div class="signupbtn">
+                      <button mat-raised-button type="submit" class="sign-up bolder" [mat-dialog-close]="form.value" routerLink="/home">Sign Up</button>
+                    </div>
+                    </section>
+                  </div>
+                </form>
+
+                  <div class="formbox">
+                    <span class="create"> <a class="link h">Create a page</a>
+                      for a celebraty, band or business.
+                    </span>
+                  </div>
+                
+        </div>
+    </div>
+
+</div>
